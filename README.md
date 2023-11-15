@@ -1,3 +1,7 @@
+https://www.w3schools.com/jsref/jsref_sign.asp#:~:text=The%20Math.,negative%2C%20it%20returns%20%2D1.
+https://javascript.plainenglish.io/javascript-recursion-5f25f620e11b
+https://www.freecodecamp.org/news/quick-intro-to-recursion/
+
 # Kenzie Academy Challenge: Arithmetic Functions
 
 Follow the instructions provided on my.kenzie.academy for this challenge. The `script.js` file is a placeholder. Feel free to rename it and/or add additional files to the project.
