@@ -88,3 +88,7 @@ console.assert(
   "power should return 1 when given the numbers 0 and 1"
 );
 console.assert(power(), "power should return null when given nothing");
+console.assert(
+  power(3.5, 0.4),
+  "power should return null when given numbers with decimals"
+);
