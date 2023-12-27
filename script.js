@@ -174,7 +174,7 @@ const fibonacci = (n) => {
 };
 console.assert(
   fibonacci(8) === 21,
-  "fibonacci should return 5040 when given the number 7"
+  "fibonacci should return 21 when given the number 8"
 );
 console.assert(factorial(), "factorial should return null when given nothing");
 console.assert(
