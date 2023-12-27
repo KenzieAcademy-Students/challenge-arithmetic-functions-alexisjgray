@@ -1,6 +1,8 @@
 https://www.w3schools.com/jsref/jsref_sign.asp#:~:text=The%20Math.,negative%2C%20it%20returns%20%2D1.
 https://javascript.plainenglish.io/javascript-recursion-5f25f620e11b
 https://www.freecodecamp.org/news/quick-intro-to-recursion/
+https://medium.com/@raghunathchavva/3-ways-to-subtract-two-numbers-in-java-without-using-the-operator-c0b45804647e
+https://www.programiz.com/javascript/examples/fibonacci-series
 
 # Kenzie Academy Challenge: Arithmetic Functions
 
