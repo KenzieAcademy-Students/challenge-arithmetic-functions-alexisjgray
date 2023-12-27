@@ -92,3 +92,104 @@ console.assert(
   power(3.5, 0.4),
   "power should return null when given numbers with decimals"
 );
+
+// The factorial function (symbol: !) says to multiply all whole numbers from our chosen number down to 1.
+
+// Examples:
+
+// 4! = 4 × 3 × 2 × 1 = 24
+// 7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
+// 1! = 1
+const factorial = (n) => {
+  if (typeof n !== "number" || Math.sign(n) === -1 || !Number.isInteger(n)) {
+    return null;
+  }
+  // I need to loop through the number from n to 1 multiplying each number
+  // write a function to subtract to use in loop
+  const subtract = (x, y) => {
+    if (y === 0) {
+      return x;
+    }
+    return subtract(x ^ y, (~x & y) << 1);
+  };
+  let result = 1;
+  for (let i = n; i > 1; i = subtract(i, 1)) {
+    result = multiply(result, i);
+  }
+  return result;
+};
+console.assert(
+  factorial(7) === 5040,
+  "factorial should return 5040 when given the number 7"
+);
+console.assert(factorial(), "factorial should return null when given nothing");
+console.assert(
+  factorial(3.5, 0.4),
+  "factorial should return null when given numbers with decimals"
+);
+console.assert(
+  factorial(-3, -4),
+  "factorial should return null when given negative numbers 3 and 4"
+);
+console.assert(
+  factorial("Hello"),
+  "factorial should return null when given a string with the word Hello"
+);
+
+// The first number of the pattern is 0, the second number is 1, and each number after that is equal to adding the two
+// numbers right before it together. For example 0+1=1 and 3+5=8. This sequence goes on forever.
+
+// F0	  F1	F2	F3	F4	F5	F6	F7	F8	F9	F10	F11	F12	F13	F14	F15	F16	F17	  F18	  F19	  F20
+// 0	  1	  1	  2	  3	  5	  8	  13	21	34	55	89	144	233	377	610	987	1597	2584	4181	6765
+
+// The Fibonacci Sequence is the series of numbers:
+
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+// The next number is found by adding up the two numbers before it:
+
+// the 2 is found by adding the two numbers before it (1+1),
+// the 3 is found by adding the two numbers before it (1+2),
+// the 5 is (2+3),
+// and so on!
+
+const fibonacci = (n) => {
+  if (typeof n !== "number" || Math.sign(n) === -1 || !Number.isInteger(n)) {
+    return null;
+  }
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  }
+  let n1 = 0,
+    n2 = 1,
+    nextTerm;
+  for (let i = 2; i <= n; i = add(i, 1)) {
+    nextTerm = add(n1, n2);
+    n1 = n2;
+    n2 = nextTerm;
+  }
+  return n2;
+};
+console.assert(
+  fibonacci(8) === 21,
+  "fibonacci should return 5040 when given the number 7"
+);
+console.assert(factorial(), "factorial should return null when given nothing");
+console.assert(
+  fibonacci(3.5, 0.4),
+  "fibonacci should return null when given numbers with decimals"
+);
+console.assert(
+  fibonacci(-3, -4),
+  "fibonacci should return null when given negative numbers 3 and 4"
+);
+console.assert(
+  fibonacci(0) === 0,
+  "fibonacci should return 0 when given the number 0"
+);
+console.assert(
+  fibonacci("Hello"),
+  "fibonacci should return null when given a string with the word Hello"
+);
